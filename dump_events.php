@@ -751,9 +751,11 @@ class CheckHikaEvent extends JObject {
 	 * if found, the event will have to be displayed.
 	 */
 	public function isConfigured($types) {
-		foreach($types as $type) {
-			if($this->_isAssociated($type)) {
-				return true;
+		if(isset($types)){
+			foreach($types as $type) {
+				if($this->_isAssociated($type)) {
+					return true;
+				}
 			}
 		}
 		return false;
