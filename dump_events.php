@@ -44,7 +44,7 @@ class plgHikashopDump_Events extends JPlugin
 	private $debugModes = null;
 	private $Events = null;
 
-	function plgHikashopDump_Events(&$subject, $config){
+	function __construct(&$subject, $config){
 		parent::__construct($subject, $config);
 
 		$app = JFactory::getApplication();
